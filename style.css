@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#image {
+	margin: 48px;
+	width: 48px;
+	height: 48px;
+	position: relative;
+
+	border-radius: 50%;
+	border: 2px solid #000;
+}
+
+#image:before,
+#image:after {
+	content: "";
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	-moz-transition: all .2s ease-out 0;
+	transition: all .2s ease-out 0;
+}
+
+#image:before {
+	opacity: 1;
+	background: url(play.png);
+}
+
+#image:hover:before {
+	opacity: 0;
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+#image:after {
+	opacity: 0;
+	background: url(pause.png);
+}
+
+#image:hover:after {
+	opacity: 1;
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
